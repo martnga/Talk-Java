@@ -3,7 +3,7 @@ public class Working {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-      System.out.println(fibonacci(5));
+      System.out.println(divisors(25, 3));
 	}
 	
 	public static int fibonacci(int x){
@@ -12,6 +12,10 @@ public class Working {
 		}else{
 		return fibonacci(x-1) + fibonacci(x-2);
 		}
+	}
+	
+	public static boolean divisors(int x, int y){
+		return (x % y == 0);
 	}
 
 }
