@@ -8,14 +8,13 @@ public class Working {
 //      System.out.println(Str.substring(1, 5));
 //		for(int i = Str.length() - 1; i >= 0; i--){
 //			System.out.print(Str.charAt(i));
-			int i = 1;
-			while (i <= 6) {
-			System.out.print(2*i + " ");
-			i = i + 1;
-			}
-			System.out.println("");
+		Printtable(5);
 			
 		}
+	
+	public static boolean divisors(int x, int y){
+		return (x % y == 0);
+	}
 	
 	
 	public static int fibonacci(int x){
@@ -26,9 +25,26 @@ public class Working {
 		}
 	}
 	
-	public static boolean divisors(int x, int y){
-		return (x % y == 0);
+	public static void Multitable(int x){
+		int i = 1;
+		while (i <= 5) {
+		System.out.print(x * i + " ");
+		i = i + 1;
+		}
+		System.out.println("");
+		
 	}
+	
+	public static void Printtable(int x){
+		int i = 1;
+		while (i <= x) {
+		Multitable(i);
+		i = i + 1;
+		}
+		
+	}
+	
+	
 	
 	// xe −x + 1 − e −x
 	
