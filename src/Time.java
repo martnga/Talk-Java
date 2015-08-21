@@ -35,5 +35,24 @@ public class Time {
 	public static void printTime(Time t){
 		System.out.println(t.hour + ":" + t.minute + ":"  + t.second);
 	}
+	
+	public static double convertToSeconds(Time t) {
+		int minutes = t.hour * 60 + t.minute;
+		double seconds = minutes * 60 + t.second;
+		return seconds;
+		}
+	
+	public Time(double secs) {
+		this.hour =(int)(secs / 3600.0);
+		secs -= this.hour * 3600.0;
+		this.minute =(int)(secs / 60.0);
+		secs -= this.minute * 60;
+		this.second = secs;
+		}
+	
+	public static Time addTime(Time t1, Time t2) {
+		double seconds = convertToSeconds(t1) + convertToSeconds(t2);
+		return new Time(seconds);
+		}
 
 }
