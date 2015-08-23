@@ -38,4 +38,14 @@ public class Card {
 	 printCard(cards[i]);
 	 }
    }
+ 
+ public static int findCard(Card[] cards, Card card) {
+	 for (int i = 0; i< cards.length; i++) {
+		 if (sameCard(cards[i], card)) {
+			 return i;
+		 }
+	  }
+	return -1;
+  }
+	 
 }
