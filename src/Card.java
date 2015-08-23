@@ -21,4 +21,21 @@ public class Card {
  public Card(int suit, int rank) {
 	this.suit = suit; this.rank = rank;
  }
+ 
+ public static void printCard(Card c) {
+	 String[] suits = { "Clubs", "Diamonds", "Hearts", "Spades" };
+	 String[] ranks = { "nunu", "Ace", "2", "3", "4", "5", "6",
+	 "7", "8", "9", "10", "Jack", "Queen", "King" };
+	 System.out.println(ranks[c.rank] + " of " + suits[c.suit]);
+	 }
+ 
+ public static boolean sameCard(Card c1, Card c2) {
+	 return(c1.suit == c2.suit && c1.rank == c2.rank);
+	 }
+ 
+ public static void printDeck(Card[] cards) {
+	 for (int i = 0; i < cards.length; i++) {
+	 printCard(cards[i]);
+	 }
+   }
 }
